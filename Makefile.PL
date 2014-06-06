@@ -27,9 +27,10 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "Number::Fraction" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -39,6 +40,7 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Exporter" => 0,
   "Lingua::EN::Numbers" => 0,
+  "Number::Fraction" => 0,
   "Test::More" => "0.88",
   "parent" => 0,
   "strict" => 0,

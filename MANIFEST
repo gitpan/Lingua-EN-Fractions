@@ -9,3 +9,4 @@ dist.ini
 lib/Lingua/EN/Fractions.pm
 t/01-require.t
 t/02-basic.t
+t/03-number-fraction.t

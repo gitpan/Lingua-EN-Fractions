@@ -3,7 +3,6 @@ abstract: 'convert "3/4" into "three quarters", etc'
 author:
   - 'Neil Bowers <neil@bowers.com>'
 build_requires:
-  Number::Fraction: '0'
   Test::More: '0.88'
 configure_requires:
   ExtUtils::MakeMaker: '6.30'
@@ -24,4 +23,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/Lingua-EN-Fractions
   repository: https://github.com/neilbowers/Lingua-EN-Fractions.git
-version: '0.02'
+version: '0.03'

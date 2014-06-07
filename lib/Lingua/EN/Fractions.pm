@@ -1,5 +1,5 @@
 package Lingua::EN::Fractions;
-$Lingua::EN::Fractions::VERSION = '0.02';
+$Lingua::EN::Fractions::VERSION = '0.03';
 use 5.006;
 use strict;
 use warnings;

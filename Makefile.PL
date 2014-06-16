@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.008;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -24,12 +24,14 @@ my %WriteMakefileArgs = (
     "Lingua::EN::Numbers" => 0,
     "parent" => 0,
     "strict" => 0,
+    "utf8" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "Test::More" => "0.88"
+    "Test::More" => "0.88",
+    "open" => 0
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -40,8 +42,10 @@ my %FallbackPrereqs = (
   "Exporter" => 0,
   "Lingua::EN::Numbers" => 0,
   "Test::More" => "0.88",
+  "open" => 0,
   "parent" => 0,
   "strict" => 0,
+  "utf8" => 0,
   "warnings" => 0
 );
 

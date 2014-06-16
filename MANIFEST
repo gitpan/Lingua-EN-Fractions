@@ -12,3 +12,4 @@ t/02-basic.t
 t/03-number-fraction.t
 t/04-number-fraction-constants.t
 t/05-whole-and-fraction.t
+t/06-unicode.t

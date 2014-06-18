@@ -1,5 +1,5 @@
 package Lingua::EN::Fractions;
-$Lingua::EN::Fractions::VERSION = '0.05';
+$Lingua::EN::Fractions::VERSION = '0.06';
 use 5.008;
 use strict;
 use warnings;
@@ -33,7 +33,8 @@ my %unicode =
     '⅜' => '3/8',
     '⅝' => '5/8',
     '⅞' => '7/8',
-    '⁄' => '/',     # FRACTION SLASH &#8260;
+    '⁄' => '/',     # FRACTION SLASH (U+2044)
+    '−' => '-',     # MINUS SIGN (U+2212)
 );
 my $unicode_regexp = join('|', keys %unicode);
 
@@ -54,7 +55,7 @@ sub fraction2words
                         $
                      |x;
 
-    $number =~ s/($unicode_regexp)/ $unicode{$1}/;
+    $number =~ s/($unicode_regexp)/ $unicode{$1}/g;
 
     if (my ($negate, $preamble, $wholepart, $numerator, $denominator) = $number =~ $fraction) {
         my $denominator_as_words = do {
@@ -140,8 +141,8 @@ you'll get back "one and a half".
 
 =head2 Unicode fraction characters
 
-As of 0.05, certain Unicode characters are also supported.
-For example:
+As of version 0.05,
+certain Unicode characters are also supported.  For example:
 
  fraction2words('½')        # "one half"
  fraction2words('1⅜')       # "one and three eighths"
@@ -152,6 +153,11 @@ character from the regular slash:
 
  fraction2words('1/2')      # "one half"
  fraction2words('1⁄2')      # "one half"
+
+As of version 0.06, you an also use the Unicode MINUS SIGN:
+
+ fraction2words('−1/2')    # "minus one half"
+ fraction2words('−⅘')      # "minus four fifths"
 
 At the moment, the DIVISION SLASH character isn't handled.
 Feel free to tell me if you think I got that wrong.

@@ -25,4 +25,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/Lingua-EN-Fractions
   repository: https://github.com/neilbowers/Lingua-EN-Fractions.git
-version: '0.05'
+version: '0.06'
